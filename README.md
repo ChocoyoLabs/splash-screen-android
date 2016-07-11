@@ -1,6 +1,14 @@
 # splash-screen-android
 Chocoyo Labs Android Library for Splash Screen
 
+![screenshot](http://i.imgur.com/C2tJyCS.png)
+
+You can download from maven central.
+
+    dependencies {
+      compile 'com.chocoyo.labs:splash:0.0.1'
+    }
+
 Add to **AndroidManifest.xml**.
 
     <activity
