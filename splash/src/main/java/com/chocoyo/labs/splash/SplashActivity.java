@@ -1,9 +1,13 @@
 package com.chocoyo.labs.splash;
 
 import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
@@ -14,6 +18,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // set status bar color
+        setStatusBarColor();
+
         // set logo
         setLogo();
 
@@ -21,6 +28,14 @@ public class SplashActivity extends AppCompatActivity {
         String className = getString(R.string.chocoyo_labs_splash_class_name);
         BackgroundTask backgroundTask = new BackgroundTask(this, className);
         backgroundTask.execute();
+    }
+
+    private void setStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            // set colorPrimaryDark
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
+        }
     }
 
     private void setLogo() {

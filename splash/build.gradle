@@ -43,7 +43,7 @@ ext {
     siteUrl = 'https://github.com/ChocoyoLabs/splash-screen-android'
     gitUrl = 'https://github.com/ChocoyoLabs/splash-screen-android.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
 
     developerId = 'chocoyolabs'
     developerName = 'Chocoyo Labs'
