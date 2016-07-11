@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 24
@@ -31,3 +29,30 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'splash'
+
+    publishedGroupId = 'com.chocoyo.labs'
+    libraryName = 'Splash'
+    artifact = 'splash'
+
+    libraryDescription = 'Chocoyo Labs Android Library for Splash Screen'
+
+    siteUrl = 'https://github.com/ChocoyoLabs/splash-screen-android'
+    gitUrl = 'https://github.com/ChocoyoLabs/splash-screen-android.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'chocoyolabs'
+    developerName = 'Chocoyo Labs'
+    developerEmail = 'info@chocoyolabs.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'http://opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
