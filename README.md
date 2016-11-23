@@ -23,6 +23,11 @@ Add to **AndroidManifest.xml**.
 
 Add to **styles.xml**
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
     <style name="AppTheme.NoActionBar.Fullscreen">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
